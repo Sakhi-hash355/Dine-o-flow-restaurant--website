@@ -1,79 +1,86 @@
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fffaf3;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* HERO SECTION */
-.hero {
-    background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0");
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    color: white;
-    text-align: center;
-    padding-top: 200px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
 }
 
-.hero h1 {
-    font-size: 50px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* NAVIGATION */
+/* NAVBAR */
 nav {
-    background-color: #8b0000;
+    background-color: #222;
     padding: 15px;
     text-align: center;
 }
 
 nav a {
     color: white;
+    margin: 0 15px;
     text-decoration: none;
-    margin: 15px;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 /* SECTIONS */
 section {
-    padding: 50px;
-    text-align: center;
-}
-
-.about {
-    background-color: #fff;
+    background: white;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 /* GALLERY */
-.gallery .images {
+.images {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.gallery img {
-    width: 300px;
-    height: 200px;
+.images img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.5s;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
 }
 
 /* BOOKING */
-.booking input {
-    padding: 10px;
-    margin: 10px;
-    width: 220px;
+.booking form input,
+.booking form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
 }
 
-.booking button {
-    padding: 10px 25px;
+.booking form button {
     background-color: #8b0000;
     color: white;
     border: none;
@@ -82,27 +89,10 @@ section {
 
 /* FOOTER */
 footer {
-    background-color: #8b0000;
+    background-color: #222;
     color: white;
-    padding: 15px;
     text-align: center;
+    padding: 15px;
 }
 
-/* ANIMATIONS */
-.fade-in {
-    animation: fadeIn 2s;
-}
 
-.slide-up {
-    animation: slideUp 1.5s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
